@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.cover {
+  background-image: linear-gradient(
+      to bottom,
+      rgb(21 23 30 / 83%),
+      rgb(100 100 100 / 67%)
+    ),
+    url(../imgs/carlos-muza-hpjSkU2UYSU-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 83vh;
+}
+
+#userTable {
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+th:hover {
+  /* color: white; */
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(215, 221, 223) 100%
+  );
+}
+
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+td:hover {
+  background-color: #2e2c2c25;
+  transition: 0.5s ease;
+}
+th {
+  background-color: #f2f2f2;
+}
+.navbar {
+  /*  */
+  /* background: rgb(255,255,255); */
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0px 15px;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.navbar .sup {
+  background-color: #3498db;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.navbar .sup:hover {
+  background-color: #1ca1fa;
+  transition: 0.5s ease;
+}
+.navbar .sin {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.sin:hover {
+  background-color: #ff2b1c;
+  transition: ease;
+  transition: 0.5s ease;
+}
+.navbar input[type="text"] {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.navbar li:not(.sup):not(.sin):not(:has(input[type="text"])) {
+  color: #fff;
+}
+
+.pagination {
+  height: 50px;
+  width: 100%;
+  vertical-align: bottom;
+  background: rgb(2, 0, 36);
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+.btn {
+  padding: 7px;
+  margin: 10px 5px;
+  cursor: pointer;
+}

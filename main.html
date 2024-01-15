@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>login page</title>
+        <link rel="stylesheet" href="./css/app.css" />
+        <link rel="stylesheet" href="./css/pop.css" />
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        />
+        <script src="./js/app.js"></script>
+        <script src="./js/ui.js"></script>
+    </head>
+  <body>
+          <!-- ============================/nav bar================== -->
+        <div class="navbar">
+            <ul>
+              <li class="sup" onclick="showSignupForm()">sign up</li>
+              <li class="sin" onclick="showSigninForm()">sign in</li>
+            </ul>
+        </div>
+        <div  class="cover"></div>
+          <!-- ============================/form sinup data================== -->
+      <div id="signupPopup" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closeSignupForm()">&times;</span>
+          <form id="signupForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required />
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
+      </div>
+      <!-- ============================/form sin data================== -->
+      <div id="signinPopup" class="popup1">
+        <div class="popup-content">
+          <span class="close" onclick="closeSigninForm()">&times;</span>
+          <form id="signinForm" onsubmit="openIndexPage(); return false;">
+            <label for="signinEmail">Email:</label>
+            <input
+              type="email"
+              id="signinEmail"
+              name="email"
+              placeholder="Enter Email Address"
+              required
+            />
+            <label for="signinPassword">Password:</label>
+            <input
+              type="password"
+              id="signinPassword"
+              name="password"
+              placeholder="Enter Your Password"
+              required
+            />
+            <button  type="submit">Sign In</a></button>
+         
+          </form>
+        </div>
+      </div>    
+      
+  </body>
+</html>

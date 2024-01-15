@@ -1,0 +1,221 @@
+{
+  "users": [
+    {
+      "id": "48b7",
+      "name": "satish",
+      "email": "satish.lakhani1906@gmail.com",
+      "gender": "male",
+      "dob": "1995-06-19",
+      "password": "1billion$"
+    },
+    {
+      "id": "8",
+      "name": "person7",
+      "email": "person2@mail.com",
+      "gender": "male",
+      "age": "27",
+      "dob": "01-08-1995",
+      "password": "123"
+    },
+    {
+      "id": "f85a",
+      "name": "sanket",
+      "email": "sanket@gmail.com",
+      "gender": "male",
+      "dob": "1955-02-25",
+      "password": "123"
+    },
+    {
+      "id": "2dc8",
+      "name": "satish",
+      "email": "person1@mail.com",
+      "gender": "male",
+      "dob": "1995-05-19",
+      "password": "123"
+    },
+    {
+      "id": "f37e",
+      "name": "satish",
+      "email": "person1@mail.com",
+      "gender": "female",
+      "dob": "2024-01-12",
+      "password": "123"
+    },
+    {
+      "id": "a8a4",
+      "name": "sumit",
+      "email": "sumit@gmail.com",
+      "gender": "male",
+      "dob": "2000-05-01",
+      "password": "1234"
+    },
+    {
+      "id": "bbcb",
+      "name": "nirav",
+      "email": "n@gmail.com",
+      "gender": "male",
+      "dob": "1995-02-01",
+      "password": "1234"
+    },
+    {
+      "id": "571c",
+      "name": "kishan",
+      "email": "kishan@mail.com",
+      "gender": "male",
+      "dob": "2002-01-12",
+      "password": "123"
+    },
+    {
+      "id": "efb4",
+      "name": "satish",
+      "email": "person1@mail.com",
+      "gender": "male",
+      "dob": "1995-06-19",
+      "password": "123"
+    },
+    {
+      "id": "6f56",
+      "name": "akshay",
+      "email": "akshay@mail.com",
+      "gender": "male",
+      "dob": "1998-05-05",
+      "password": "123"
+    },
+    {
+      "id": "3b85",
+      "name": "pratik ",
+      "email": "pgupta@mail.com",
+      "gender": "male",
+      "dob": "2001-05-03",
+      "password": "123"
+    },
+    {
+      "id": "0850",
+      "name": "amit",
+      "email": "amityadav@mail.com",
+      "gender": "male",
+      "dob": "1998-02-01",
+      "password": "123"
+    },
+    {
+      "id": "cbe6",
+      "name": "swapnil",
+      "email": "swapnil@mail.com",
+      "gender": "male",
+      "dob": "1999-06-02",
+      "password": "123"
+    },
+    {
+      "id": "9283",
+      "name": "geeta",
+      "email": "female@mail.com",
+      "gender": "female",
+      "dob": "2009-03-15",
+      "password": "123"
+    },
+    {
+      "id": "9283",
+      "name": "geeta",
+      "email": "female@mail.com",
+      "gender": "female",
+      "dob": "2009-03-15",
+      "password": "123"
+    },
+    {
+      "id": "9283",
+      "name": "geeta",
+      "email": "female@mail.com",
+      "gender": "female",
+      "dob": "2009-03-15",
+      "password": "123"
+    },
+    {
+      "id": "9283",
+      "name": "geeta",
+      "email": "female@mail.com",
+      "gender": "female",
+      "dob": "2009-03-15",
+      "password": "123"
+    },
+    {
+      "id": "9283",
+      "name": "geeta",
+      "email": "female@mail.com",
+      "gender": "female",
+      "dob": "2009-03-15",
+      "password": "123"
+    },
+    {
+      "id": "9283",
+      "name": "geeta",
+      "email": "female@mail.com",
+      "gender": "female",
+      "dob": "2009-03-15",
+      "password": "123"
+    },
+    {
+      "id": "9283",
+      "name": "geeta",
+      "email": "female@mail.com",
+      "gender": "female",
+      "dob": "2009-03-15",
+      "password": "123"
+    },
+    {
+      "id": "9283",
+      "name": "geeta",
+      "email": "female@mail.com",
+      "gender": "female",
+      "dob": "2009-03-15",
+      "password": "123"
+    },
+    {
+      "id": "63e0",
+      "name": "sanjay",
+      "email": "sanjay@mail.com",
+      "gender": "male",
+      "dob": "1991-02-15",
+      "password": "123"
+    },
+    {
+      "id": "488e",
+      "name": "tripathi",
+      "email": "tripathi@mail.comn",
+      "gender": "male",
+      "dob": "1991-11-19",
+      "password": "123"
+    },
+    {
+      "id": "efd5",
+      "name": "harsh",
+      "email": "harsh@mail.com",
+      "gender": "male",
+      "dob": "1955-06-02",
+      "password": "123"
+    },
+    {
+      "id": "ff0a",
+      "name": "rajeev",
+      "email": "rajeev@mail.com",
+      "gender": "male",
+      "dob": "1975-05-13",
+      "password": "123"
+    },
+    {
+      "id": "f9db",
+      "name": "khare",
+      "email": "khare@mail.com",
+      "gender": "male",
+      "dob": "1978-06-15",
+      "password": "123"
+    },
+    {
+      "id": "8dc7",
+      "name": "vishal",
+      "email": "vg@mail.com",
+      "gender": "male",
+      "dob": "1992-08-25",
+      "password": "123"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 40px 30px;
+  box-shadow: 0 0 1000px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  width: 400px;
+  border-radius: 20px;
+}
+.popup1 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding:30px  40px;
+    box-shadow: 0 0 1000px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    width: 400px;
+    border-radius: 20px;
+    height:244px ;
+    
+  }
+  
+.popup-content {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#signupForm {
+  display: grid;
+  gap: 10px;
+}
+
+#signupForm label {
+  font-weight: bold;
+}
+
+#signupForm input,
+#signupForm select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+#signupForm button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#signupForm button:hover {
+  background-color: #2980b9;
+}
+/* ===============sin in=============== */
+#signinForm {
+    display: grid;
+    gap: 10px;
+  }
+  
+  #signinForm label {
+    font-weight: bold;
+  }
+  
+  #signinForm input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  #signinForm button {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #signinForm button:hover {
+    background-color: #27ae60;
+  }
