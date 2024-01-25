@@ -23,7 +23,7 @@
         <li>
           <input type="text" id="searchInput" placeholder="Search here" />
         </li>
-        <li class="sup" onclick="fetchAndDisplayUsers()">search</li>
+        <li class="sup" onclick="ShowSearchUsers()">search</li>
       </ul>
     </div>
     <!-- ====================== Table body================================    -->
@@ -37,7 +37,7 @@
             <th onclick="setSortDirection()">gender</th>
             <th onclick="setSortDirection()">age</th>
             <th onclick="setSortDirection()">birth date</th>
-            <th onclick="sortUsers()">Password</th>
+            <th >Password</th>
           </tr>
         </thead>
         <tbody id="tableData">
@@ -45,7 +45,7 @@
         </tbody>
       </table>
     </div>
-    <!-- ====================== pagination ================================    -->
+    <!-- ====================== pagination ===============================-->
     <div id="pagination" class="pagination"></div>
   </body>
 </html>

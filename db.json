@@ -33,14 +33,7 @@
       "dob": "1995-05-19",
       "password": "123"
     },
-    {
-      "id": "f37e",
-      "name": "satish",
-      "email": "person1@mail.com",
-      "gender": "female",
-      "dob": "2024-01-12",
-      "password": "123"
-    },
+   
     {
       "id": "a8a4",
       "name": "sumit",

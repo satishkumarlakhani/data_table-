@@ -1,5 +1,8 @@
 const itemsPerPage = 10;
 let currentPage = 1;
+let totalItems;
+let sortDirection = {};
+   
 fetch("http://localhost:3000/users")
   .then((response) => response.json())
   .then((users) => {
@@ -22,102 +25,21 @@ fetch("http://localhost:3000/users")
   .catch((error) => {
     console.error("Error fetching data:", error);
   });
-function signInUser() {
-  var email = document.getElementById("signinEmail").value;
-  var password = document.getElementById("signinPassword").value;
 
-  fetch("http://localhost:3000/users")
-    .then((response) => response.json())
-    .then((users) => {
-      const matchedUser = users.find(
-        (user) => user.email === email && user.password === password
-      );
+ShowSearchUsers();
 
-      if (matchedUser) {
-        closeSigninForm();
-        // Redirect to index.html after successful authentication
-        window.location.href = "index.html";
-      } else {
-        // Alert for unsuccessful authentication
-        alert("Invalid email or password. Please try again.");
-      }
-    })
-    .catch((error) => {
-      // Provide a meaningful error message for debugging
-      console.error("Error fetching data:", error);
-    });
-}
-function postSignupData() {
-  var formData = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    gender: document.getElementById("gender").value,
-    dob: document.getElementById("dob").value,
-    password: document.getElementById("password").value,
-  };
-  for (var key in formData) {
-    if (formData[key] === "") {
-      alert("Please fill out all fields.");
-      return;
-    }
-  }
-
-  // Make a POST request to add the user on the server
-  fetch("http://localhost:3000/users", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formData),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("Success:", data);
-      alert("Sign-up successful!");
-      closeSignupForm();
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-      alert("An error occurred during sign-up. Please try again later.");
-    });
-}
-document.addEventListener("DOMContentLoaded", () => {
-  document
-    .getElementById("signupForm")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
-      postSignupData();
-    });
-
-  document
-    .getElementById("signinForm")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
-      signInUser();
-    });
-});
-
-function calculateAgeFromDOB(dob) {
-  var birthDate = new Date(dob);
-  var currentDate = new Date();
-
-  var age = currentDate.getFullYear() - birthDate.getFullYear();
-
-  if (
-    currentDate.getMonth() < birthDate.getMonth() ||
-    (currentDate.getMonth() === birthDate.getMonth() &&
-      currentDate.getDate() < birthDate.getDate())
-  ) {
-    age--;
-  }
-
-  return age;
-}
 function displayUsers(users) {
   const tableBody = document.getElementById("tableData");
   tableBody.innerHTML = "";
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
+  let startIndex = (currentPage - 1) * itemsPerPage;
+  let endIndex = startIndex + itemsPerPage;
+
+  if (startIndex > users.length - 1) {
+    currentPage = Math.ceil(users.length/itemsPerPage);
+    startIndex = (currentPage - 1) * itemsPerPage;
+    endIndex = startIndex + itemsPerPage;
+  }
+
   for (let i = startIndex; i < endIndex && i < users.length; i++) {
     const user = users[i];
     const row = document.createElement("tr");
@@ -135,23 +57,28 @@ function displayUsers(users) {
   }
   displayPagination(users.length);
 }
-function displayPagination(totalItems) {
+function displayPagination(totalItems, filteredUsers) {
   const totalPages = Math.ceil(totalItems / itemsPerPage);
   const paginationContainer = document.getElementById("pagination");
-    paginationContainer.innerHTML = "";
-
+  paginationContainer.innerHTML = "";
   for (let i = 1; i <= totalPages; i++) {
     const pageButton = document.createElement("button");
     pageButton.innerText = i;
     pageButton.classList.add("btn");
-    pageButton.addEventListener("click", () => {
-      currentPage = i;
-     });
+    pageButton.addEventListener(
+      "click",
+      createPageButtonClickHandler(i, filteredUsers)
+    );
     paginationContainer.appendChild(pageButton);
   }
 }
-
-function fetchAndDisplayUsers() {
+function createPageButtonClickHandler(pageNumber, filteredUsers) {
+  return function () {
+    currentPage = pageNumber;
+    ShowSearchUsers(filteredUsers);
+  };
+}
+function ShowSearchUsers(currentPage) {
   fetch("http://localhost:3000/users")
     .then((response) => response.json())
     .then((users) => {
@@ -168,42 +95,9 @@ function fetchAndDisplayUsers() {
       });
 
       displayUsers(filteredUsers);
+      displayPagination(filteredUsers.length);
     })
     .catch((error) => {
       console.error("Error fetching data:", error);
     });
 }
-fetchAndDisplayUsers();
-function setSortDirection(columnIndex) {
-  const table = document.getElementById("userTable");
-  const rows = Array.from(table.querySelectorAll("tbody tr"));
-  const isStringColumn = isNaN(
-    parseFloat(rows[0].cells[columnIndex].textContent)
-  );
-  rows.sort((a, b) => {
-    const aValue = a.cells[columnIndex].textContent;
-    const bValue = b.cells[columnIndex].textContent;
-
-    if (isStringColumn) {
-      return aValue.localeCompare(bValue);
-    } else {
-      return parseFloat(aValue) - parseFloat(bValue);
-    }
-  });
-
-  if (table.dataset.sortDirection === "desc") {
-    rows.reverse();
-    table.dataset.sortDirection = "asc";
-  } else {
-    table.dataset.sortDirection = "desc";
-  }
-  const tbody = table.querySelector("tbody");
-  tbody.innerHTML = "";
-  rows.forEach((row) => tbody.appendChild(row));
-}
-document.addEventListener("DOMContentLoaded", () => {
-  const headerCells = document.querySelectorAll("th");
-  headerCells.forEach((cell, index) => {
-    cell.addEventListener("click", () => setSortDirection(index));
-  });
-});

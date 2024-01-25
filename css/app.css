@@ -8,6 +8,7 @@
       to bottom,
       rgb(21 23 30 / 83%),
       rgb(100 100 100 / 67%)
+      
     ),
     url(../imgs/carlos-muza-hpjSkU2UYSU-unsplash.jpg);
   background-position: center;
@@ -53,16 +54,15 @@ th {
   background-color: #f2f2f2;
 }
 .navbar {
-  /*  */
-  /* background: rgb(255,255,255); */
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background-image: linear-gradient( 135deg, #3c8ce773 10%, #00eaff85 100%);
   padding: 10px;
   display: flex;
   justify-content: flex-end;
+  position: sticky;
+  vertical-align: top;
+  top: 0;
+  z-index: 11;
+  
 }
 
 .navbar ul {
@@ -117,12 +117,8 @@ th {
   vertical-align: bottom;
   background: rgb(2, 0, 36);
   background: rgb(255, 255, 255);
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
-  position: absolute;
+  background-image: linear-gradient( 135deg, #3c8ce773 10%, #00eaff85 100%);
+  position: sticky;
   bottom: 0;
   text-align: center;
 }
@@ -130,5 +126,8 @@ th {
 .btn {
   padding: 7px;
   margin: 10px 5px;
+  cursor: pointer;
+}
+button{
   cursor: pointer;
 }
